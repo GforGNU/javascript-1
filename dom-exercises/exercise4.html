@@ -17,25 +17,99 @@
 </head>
 <body>
 <form name="form">
-    <select name="font_family" id="font_family">
+    <select name="font_family" id="font_family" onchange="fontchange (this);">
         <option value="Arial" selected>Arial</option>
         <option value="Verdana">Verdana</option>
         <option value="Helvetica">Helvetica</option>
         <option value="Times New Roman">Times New Roman</option>
         <option value="Courier New">Courier New</option>
     </select>
-    <select name="font_size" id="font_size">
+    <select name="font_size" id="font_size" onchange="sizechange (this);">
         <option value="8pt">8pt</option>
         <option value="10pt">10pt</option>
         <option value="12pt" selected>12pt</option>
         <option value="14pt">14pt</option>
         <option value="16pt">16pt</option>
     </select>
-    <label>Italic <input type="checkbox" name="font_italic" id="font_italic"></label>
-    <label>Bold <input type="checkbox" name="font_bold" id="font_bold"></label>
-    <label>Underline <input type="checkbox" name="font_underline" id="font_underline"></label>
+    <label>Italic <input type="checkbox" name="font_italic" id="font_italic" onclick="italicChange ();"></label>
+    <label>Bold <input type="checkbox" name="font_bold" id="font_bold" onclick="boldChange ();"></label>
+    <label>Underline <input type="checkbox" name="font_underline" id="font_underline" onclick="underlineChange ();"></label>
 </form>
 
 <div id="text">The quick brown fox jumps over the lazy dog</div>
+
+
+<script>
+//family
+    var f = document.getElementById('font_family');
+
+    function fontchange(select){
+        
+        document.getElementById("text").style.fontFamily = select.options[select.selectedIndex].value;
+    }
+
+
+//size
+    var s = document.getElementById('font_size');
+
+function sizechange(select){
+    
+    document.getElementById("text").style.fontSize = select.options[select.selectedIndex].value;
+}
+
+
+//italic
+var i = document.getElementById('font_italic');
+
+
+function italicChange(){
+    if (i.checked == true) {
+        document.getElementById("text").style.fontStyle = 'italic';
+
+    }
+    if (i.checked == false) {
+       document.getElementById("text").style.fontStyle = 'initial';
+
+    }
+    
+     
+} 
+
+//Bold
+var b = document.getElementById('font_bold');
+
+
+function boldChange(){
+    if (b.checked == true) {
+        document.getElementById("text").style.fontWeight = 'bold';
+
+    }
+    else {
+       document.getElementById("text").style.fontWeight = 'initial';
+
+    }
+    
+     
+} 
+
+
+//Underline
+var u = document.getElementById('font_underline');
+
+
+function underlineChange(){
+    if (u.checked == true) {
+        document.getElementById("text").style.textDecoration = 'underline';
+
+    }
+    else {
+       document.getElementById("text").style.textDecoration = 'initial';
+
+    }
+    
+     
+} 
+
+</script>
 </body>
 </html>

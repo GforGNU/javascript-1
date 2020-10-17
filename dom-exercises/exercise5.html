@@ -19,27 +19,68 @@
 </head>
 <body>
 
-<form name="pw">
+<form name="pw" >
     <table>
         <tr>
             <td>Password (min 6 characters):</td>
-            <td><input type="password" name="password1" id="password1" size="10" placeholder="Password"></td>
+            <td><input type="password" onkeyup="userinput1();" name="password1" id="password1" size="10" placeholder="Password"  ></td>
             <td>
-                <div id="pw1_check" class="err"></div>
+                <div id="pw1_check" class="err"> too short</div>
             </td>
         </tr>
         <tr>
             <td>Repeat password:</td>
-            <td><input type="password" name="password2" id="password2" size="10" placeholder="Password"></td>
+            <td><input type="password"  onkeyup="userinput1();" name="password2" id="password2" size="10" placeholder="Password"></td>
             <td>
-                <div id="pw2_check" class="err"></div>
+                <div id="pw2_check" class="err"> password doesn't match</div>
             </td>
         </tr>
     </table>
 
-    <input type="submit" value="Submit" id="submitBtn"/>
+    <input type="submit" value="Submit" id="submitBtn"  />
 </form>
 
+<script>
+
+   
+    
+
+
+    
+
+
+function userinput1(){
+    
+    var check1 = document.getElementById("pw1_check");
+    var check2 = document.getElementById("pw2_check");
+    var submit = document.getElementById("submitBtn");
+    
+    submit.style.display = "none";
+    
+
+    var pass1 = document.getElementById('password1').value;
+    var pass2 = document.getElementById('password2').value;
+  
+    
+    if(pass1.length >= 6 )
+    {
+       
+        check1.style.display = "none";
+    
+
+        }
+        
+
+    if (pass1 == pass2) {
+    
+    check2.style.display = "none";
+    submit.style.display = "block";
+    }
+        
+}
+
+
+</script>
 </body>
 </html>
 

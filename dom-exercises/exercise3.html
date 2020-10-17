@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Exercise #3: Changing image</title>
+    <style>
+        
+            </style>
+</head>
+<body>
+
+    <body>
+        <form>
+            <select id="selectList" name="mySelect" onchange = "imgChange (this);">
+                <option value="NoImg.jpg">select</option> 
+              <option value="Norway.png" >Norway</option>
+              <option value="NoImg.jpg">Italy</option>
+              
+            </select>
+    
+
+        </form>
+            
+            
+   
+        
+      
+    
+      <img src="NoImg.jpg" name="image-swap" />  
+
+
+<script>
+
+function imgChange(select){
+  var image = document.getElementsByName("image-swap")[0];
+  image.src = select.options[select.selectedIndex].value;
+}  
+
+
+/*var y =  document.getElementById('none');
+//var x = document.getElementById('mySelect').value;
+
+  //y.onchange = function() {imgChange()};
+
+function imgChange() {
+    var y =  document.getElementById('none');
+    var x = document.getElementById('selectList').value;
+    if (x.value = 'Norway'){
+        y.src = "Norway.png";
+    }
+  
+  
+}
+
+/*function imgChange() {
+    x.src = "Norway.png";
+    return x;
+}*/
+
+
+    
+    </script>
+</body>
+</html>

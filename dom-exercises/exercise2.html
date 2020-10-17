@@ -10,11 +10,138 @@
             border: 1px solid black;
         }
     </style>
-    <script>
-        /* TODO: write JS code here */
-    </script>
+ 
 </head>
 <body>
 <div id="mydiv"></div>
+
+<script>
+    /* TODO: write JS code here */
+    
+   
+    changeColor = document.getElementById('mydiv'),
+        colors = ['red' , 'green', 'blue'];
+         colorIndex = 0;
+
+        function M() 
+        {
+            document.getElementById('mydiv').style.backgroundColor = colors[colorIndex];
+            colorIndex = (colorIndex + 1) % colors.length;
+        };
+
+           changeColor.addEventListener('click',M) 
+
+   
+
+   
+       
+    
+    /*var x = document.getElementById("mydiv");
+
+     x.style.backgroundColor = 'blue';
+     //x.onclick = function() {red()}
+
+     function red() {
+        x.style.backgroundColor = 'red';
+       
+     }
+        function green() {
+        x.style.backgroundColor = 'green';
+        
+        }
+
+     if (x.style.backgroundColor = 'blue') {
+        x.onclick = function() {red()};
+        
+    } 
+     if (x.style.backgroundColor = 'red') {
+        x.onclick = function() {green()};
+    } 
+    /*else  {
+        x.onclick = function() {red()};
+    } */
+
+    
+    
+
+
+    //if (x.style.backgroundColor == 'red') {
+    //    x = x.style.backgroundColor = 'green';
+
+   // }
+
+ /*  function toRed() {
+    x.style.backgroundColor = 'red';
+
+
+}
+
+function toGreen() {
+    x.style.backgroundColor = 'green';
+    
+}
+
+function toBlue() {
+    x.style.backgroundColor = 'blue';
+}*/
+
+    
+  
+    //if (x.style.backgroundColor == 'green') {
+    //    x.addEventListener("click", toBlue);
+
+   // }
+
+/*function toRed() {
+    x.style.backgroundColor = 'red';
+
+
+}
+
+function toGreen() {
+    x.style.backgroundColor = 'green';
+    
+}
+
+function toBlue() {
+    x.style.backgroundColor = 'blue';
+    
+}*/
+
+
+//var x = document.getElementById("mydiv");
+//x.style.backgroundColor = 'blue';
+
+//x.addEventListener("click", myFunction);
+//x.addEventListener("click", someOtherFunction);
+//x.onclick = doSomething;
+//function doSomething() {
+ //   x.style.backgroundColor = 'red';
+//}
+//x.onclick = doSomethingelse;
+//function doSomethingelse() {
+  //  x.style.backgroundColor = 'green';
+//}
+        
+        
+       /* else {
+            document.getElementById("mydiv").onclick = function() {toGreen()};
+            function toGreen(){
+        document.getElementById("mydiv").style.backgroundColor == 'green';
+        }
+        */
+            
+
+        
+  
+
+    
+   
+    //function toGreen(){
+      //  document.getElementById("mydiv").style.backgroundColor = 'green';
+    //}
+
+
+</script>
 </body>
 </html>

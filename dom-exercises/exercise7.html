@@ -4,20 +4,36 @@
     <meta charset="UTF-8">
     <title>Exercise #7: Simple playlist</title>
     <link rel="stylesheet" href="exercise7.css">
-    <script>
-        /* TODO this is for you to complete */
-    </script>
+  
 </head>
 <body>
 
 <form>
-    <input type="text" id="songTextInput" size="40" placeholder="Song name">
-    <input type="button" id="addButton" value="Add Song">
+    <input type="text" id="songTextInput" size="40" placeholder="Song name" >
+    <input type="button" id="addButton" value="Add Song" onclick="addsong ()">
 </form>
 
 <ul id="playlist">
+    <li id="song1"></li>
+    <li id="song2"></li>
+    <li id="song3"></li>
 </ul>
 
+
+<script>
+   var Song1 = document.getElementById("song1");
+   var Song2 = document.getElementById("song2");
+   var Song3 = document.getElementById("song3");
+   var userInput = document.getElementById("songTextInput").value;
+
+
+    function addsong (){
+        Song1.innerHTML = userInput;
+        Song2.innerHTML = userInput;
+        Song3.innerHTML = userInput;
+
+    }
+</script>
 </body>
 </html>
 
